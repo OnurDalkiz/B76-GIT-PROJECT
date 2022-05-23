@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="Hesapla" onclick="hesapla()">
+    
+    <h3 id="sonuc"></h3>
+
+
+    <script>
+
+        function hesapla(){
+
+            //1.Yontem(Not Recommended)
+            /*let Sayi0 = prompt("1. sayiyi giriniz");
+            let Sayi1 = prompt("2. sayiyi giriniz");
+            let Sayi2 = prompt("3. sayiyi giriniz");
+            let sayi3 = prompt("4. sayiyi giriniz");
+            let sayi4 = prompt("5. sayiyi giriniz");
+            let sayi5 = prompt("6. sayiyi giriniz");
+            let sayi6 = prompt("7. sayiyi giriniz");
+            let sayi7 = prompt("8. sayiyi giriniz");
+            let sayi8 = prompt("9. sayiyi giriniz");
+            let sayi9 = prompt("10. sayiyi giriniz");*/
+
+
+            //2.Yontem(Best Way)
+
+            let toplam = 0;
+
+            for(let i = 1 ; i <= 10 ; i++ ){
+
+//Hatali Yontem:let Sayi = prompt(i + " Sayiyi giriniz");
+
+    /*Good*/    let sayi = prompt(`${i}. Sayiyi Giriniz`);
+
+                toplam += Number(sayi);//+= ibaresi toplam = toplam + Number(sayi); ile ayni anlama gelir. 
+
+            }
+
+                toplam = toplam / 10;
+
+                document.querySelector("#sonuc").innerHTML = `Sonuc:${toplam}`;
+
+
+
+        }
+    </script>
+</body>
+</html>
